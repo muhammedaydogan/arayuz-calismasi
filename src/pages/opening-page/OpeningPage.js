@@ -6,7 +6,7 @@ import { YellowSneaker } from "../.././images";
 
 export const OpeningPage = () => {
   return (
-    <div className="w-screen h-fit max-h-screen max-w-screen max-h-screen relative overflow-hidden flex flex-col">
+    <div className="w-screen h-fit relative overflow-hidden flex flex-col">
       {/* BACKGROUND sol taraf  - Gradyan */}
       <div
         className="absolute inset-0 bg-gradient-to-b from-light-yellow to-white -z-50"
@@ -25,9 +25,10 @@ export const OpeningPage = () => {
       <TopBar />
 
       {/* CONTENT */}
-      <div className="flex flex-row justify-evenly px-20 py-1">
-        <div className="flex flex-col py-[83px] gap-8 self-center">
-          <div className="text-black text-7xl font-extrabold font-sans">
+      <div className="flex flex-col md:flex-row justify-evenly px-20 py-1 gap-0">
+        {/* Left Side */}
+        <div className="flex flex-col py-8 md:py-[83px] gap-8 self-center">
+          <div className="text-black text-4xl md:6xl lg:text-7xl font-extrabold font-sans">
             Collectible Sneakers
           </div>
           <div className="text-black text-lg self-center font-sans font-normal">
@@ -43,15 +44,21 @@ export const OpeningPage = () => {
             />
           </div>
         </div>
-        <div className="relative max-h-[400px] max-w-[400px]">
+        {/* Right Side */}
+        <div className="relative w-full max-h-[400px] max-w-[400px] flex justify-center items-center">
           {/* Yellow Background */}
-          <div className="absolute bottom-[3%] left-[9%] rounded-[50px] bg-[#FBBF24] -z-50 h-[77%] w-[78%]"></div>
-          <img src={YellowSneaker} alt="" />
+          <div className="absolute inset-0 m-[12%] rounded-[50px] -z-50 bg-[#FBBF24] pb-100% aspect-square self-center"></div>
+          <img
+            src={YellowSneaker}
+            alt=""
+            className="w-full h-full object-contain"
+          />
         </div>
       </div>
 
-      <div className="flex flex-row bg-pink w-full max-w-screen justify-evenly px-20 py-20">
-        <div className="flex flex-col">
+      {/* BOTTOM CONTENT */}
+      <div className="flex flex-col md:flex-row gap-[90px] bg-pink justify-around px-10 md:px-20 py-10 md:py-20">
+        <div className="flex flex-col p-6">
           <CollersIcon name="op-1" />
           <div>Nibh viverra</div>
           <div>
@@ -59,7 +66,7 @@ export const OpeningPage = () => {
             Consequat turpis natoque leo, massa.
           </div>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col p-6">
           <CollersIcon name="op-2" />
           <div>Cursus amet</div>
           <div>
@@ -67,7 +74,7 @@ export const OpeningPage = () => {
             Consequat turpis natoque leo, massa.{" "}
           </div>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col p-6">
           <CollersIcon name="op-3" />
           <div>Ipsum fermentum</div>
           <div>
