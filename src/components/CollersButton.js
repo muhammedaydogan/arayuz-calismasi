@@ -10,7 +10,7 @@ export const CollersButton = ({
   wrapperClassName,
 }) => {
   const borderColor = isWhite === true ? "border-white" : "border-primary";
-  const borderAttr = border ? "border-2 " + borderColor : "border-0 ";
+  const borderAttr = border ? "border-[3px] " + borderColor : "border-0 ";
   const textColor = isWhite === true ? "text-white" : "text-primary";
 
   return (

@@ -5,7 +5,7 @@ import ProductsPage from "./pages/products/ProductsPage";
 
 function App() {
   return (
-    <div>
+    <div className="overflow-x-hidden overflow-y-auto no-scrollbar max-h-fit font-sans">
       <OpeningPage />
       <ProductsPage />
       <JoinUsPage />

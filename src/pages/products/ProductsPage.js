@@ -28,7 +28,7 @@ const ProductsPage = () => {
 
   const createProducts = () =>
     productData.map((e, i) => (
-      <div className="flex-1 z-[5] p-12">
+      <div key={`productCard${i}`} className="flex-1 z-[5] p-8">
         <ProductCard key={i + "product"} {...e} />
       </div>
     ));
@@ -50,22 +50,17 @@ const ProductsPage = () => {
         </div>
       </div>
       {/* PRODUCTS */}
-      <div className="relative grid gap-8 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 pt-2 md:pt-4 lg:pt-6 mt-2 md:mt-4 lg:mt-6">
+      {/* Text Sizes could be better but i've no time */}
+      <div className="relative w-full grid gap-8 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 pt-2 md:pt-4 lg:pt-6 mt-2 md:mt-4 lg:mt-6 px-12">
         {/* Colorful Background */}
         <div className="absolute xl:w-full h-full hidden xl:flex justify-center">
-          {/* <div className="relative w-full h-full"> */}
           <CollersIcon name="bg-product-page-h" />
-          {/* </div> */}
         </div>
         <div className="absolute w-full h-full flex lg:hidden justify-center">
-          {/* <div className="relative w-full h-full"> */}
           <CollersIcon name="bg-product-page-v" />
-          {/* </div> */}
         </div>
-        <div className="absolute w-full h-full hidden lg:flex xl:hidden justify-center">
-          {/* <div className="relative w-full h-full"> */}
+        <div className="absolute w-full h-full hidden lg:flex xl:hidden justify-center ">
           <CollersIcon name="bg-product-page-lg" />
-          {/* </div> */}
         </div>
         {createProducts()}
       </div>

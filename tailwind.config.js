@@ -10,6 +10,7 @@ module.exports = {
         "transparent-gray": "rgba(0, 0, 0, 0.5)",
         primary: "#78350F",
         tertiary: "#0F172A",
+        cream: "#FFFDF6",
       },
       fontFamily: {
         sans: ["Roboto", "sans-serif"], // Varsayılan font Roboto oldu
@@ -22,14 +23,15 @@ module.exports = {
       },
       boxShadow: {
         light: "0 3px 30px rgba(255, 255, 255, 0.4)",
+        dark: "0 3px 15px rgba(0, 0, 0, 0.4)",
       },
       aspectRatio: {
-        "card": "83 / 100",
+        card: "83 / 100",
         "20/11": "20 / 11",
       },
       fontSize: {
-        '18px': '18px',
-        '24px': '24px',
+        "18px": "18px",
+        "24px": "24px",
       },
     },
   },

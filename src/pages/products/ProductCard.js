@@ -24,7 +24,8 @@ const ProductCard = ({ title, description, image }) => {
           svg={<CollersIcon name="shopping" />}
           border={true}
           isWhite={true}
-          wrapperClassName={"flex justify-center"}
+          wrapperClassName={"flex"}
+          className="w-full"
         />
       </div>
     </div>
