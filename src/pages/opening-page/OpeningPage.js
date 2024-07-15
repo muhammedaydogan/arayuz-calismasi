@@ -27,8 +27,8 @@ export const OpeningPage = () => {
       {/* CONTENT */}
       <div className="flex flex-col md:flex-row justify-evenly px-20 py-1 gap-0">
         {/* Left Side */}
-        <div className="flex flex-col py-8 md:py-[83px] gap-8 self-center">
-          <div className="text-black text-4xl md:6xl lg:text-7xl font-extrabold font-sans">
+        <div className="flex flex-col py-8 md:py-12 lg:py-20 gap-8 self-center md:mr-20">
+          <div className="text-black text-4xl md:text-5xl lg:text-7xl font-extrabold font-sans">
             Collectible Sneakers
           </div>
           <div className="text-black text-lg self-center font-sans font-normal">
@@ -36,7 +36,7 @@ export const OpeningPage = () => {
             suspendisse nec lorem mauris. Pharetra, eu imperdiet ipsum ultrices
             amet.
           </div>
-          <div className="flex flex-row">
+          <div className="flex flex-row gap-4">
             <CollersButton text="Sign Up Now" border={true} />
             <CollersButton
               text="Watch Demo"
