@@ -38,8 +38,8 @@ export const TopBar = () => {
   }, []);
 
   return (
-    <div className="flex flex-row py-6 px-20 justify-between items-center flex-wrap">
-      <h1 className="text-[32px] font-sans font-bold">COLLERS</h1>
+    <div className="flex flex-row py-6 px-12 md:px-20 justify-between items-center flex-wrap">
+      <h1 className="text-[32px] font-sans font-bold text-primary">Collers</h1>
       <div className="bg-transparent text-primary flex items-center">
         <div className="hidden md:flex md:flex-row space-x-4">
           {createButtons()}
