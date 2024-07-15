@@ -28,15 +28,15 @@ const ProductsPage = () => {
 
   const createProducts = () =>
     productData.map((e, i) => (
-      <div className="flex-1 z-[5]">
+      <div className="flex-1 z-[5] p-12">
         <ProductCard key={i + "product"} {...e} />
       </div>
     ));
 
   return (
-    <div className="flex flex-col bg-tertiary p-6 md:p-12 lg:p-20 gap-20 -z-[10]">
+    <div className="relative flex flex-col bg-tertiary z-0">
       {/* TOP LINE */}
-      <div className="flex flex-col md:flex-row w-full justify-between gap-8">
+      <div className="flex flex-col md:flex-row w-full justify-between gap-8 px-6 pt-6 md:px-12 md:pt-12 lg:px-20 lg:pt-20">
         <div className=" text-white font-bold text-4xl md:text-5xl text-center">
           The best of the best
         </div>
@@ -50,11 +50,17 @@ const ProductsPage = () => {
         </div>
       </div>
       {/* PRODUCTS */}
-      {/* TODO add div flexshrink */}
-      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="relative grid gap-8 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 pt-2 md:pt-4 lg:pt-6 mt-2 md:mt-4 lg:mt-6">
         {/* Colorful Background */}
-        <div className="absolute w-full h-full flex justify-center">
-          <CollersIcon name="bg-product" />
+        <div className="absolute xl:w-full h-full hidden xl:flex justify-center">
+          {/* <div className="relative w-full h-full"> */}
+          <CollersIcon name="bg-product-page-h" />
+          {/* </div> */}
+        </div>
+        <div className="absolute w-full h-full flex md:hidden justify-center">
+          {/* <div className="relative w-full h-full"> */}
+          <CollersIcon name="bg-product-page-v" />
+          {/* </div> */}
         </div>
         {createProducts()}
       </div>
