@@ -335,6 +335,61 @@ const CollersIcon = ({ name }) => {
         </svg>
       );
 
+    case "bg-product-page-lg":
+      return (
+        <svg
+          viewBox="0 0 800 800"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            opacity="0.75"
+            x="600"
+            y="50"
+            width="200"
+            height="200"
+            rx="40"
+            fill="#15803D"
+          />
+          <rect
+            opacity="0.75"
+            x="500"
+            y="350"
+            width="150"
+            height="150"
+            rx="30"
+            fill="#A21CAF"
+          />
+          <rect
+            opacity="0.75"
+            x="300"
+            y="350"
+            width="120"
+            height="120"
+            rx="20"
+            fill="#B45309"
+          />
+          <rect
+            opacity="0.75"
+            x="150"
+            y="0"
+            width="180"
+            height="180"
+            rx="40"
+            fill="#0369A1"
+          />
+          <rect
+            opacity="0.75"
+            x="0"
+            y="200"
+            width="250"
+            height="250"
+            rx="50"
+            fill="#BE185D"
+          />
+        </svg>
+      );
+
     default:
       return <div>ICON HERE</div>;
   }

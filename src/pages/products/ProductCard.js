@@ -13,8 +13,12 @@ const ProductCard = ({ title, description, image }) => {
         />
       </div>
       <div className="p-8 flex flex-col flex-1 text-white justify-between">
-        <div className="font-bold text-24px">{title}</div>
-        <div className="font-normal text-18px">{description}</div>
+        <div className="font-bold text-[32px] md:text-[38px] lg:text-[26px] xl:text-[28px] 2xl:text-[36px]">
+          {title}
+        </div>
+        <div className="font-normal text-[24px] md:text-[38px] lg:text-[24px] xl:text-[22px] 2xl:text-[28px] my-8">
+          {description}
+        </div>
         <CollersButton
           text="Buy Now"
           svg={<CollersIcon name="shopping" />}

@@ -57,9 +57,14 @@ const ProductsPage = () => {
           <CollersIcon name="bg-product-page-h" />
           {/* </div> */}
         </div>
-        <div className="absolute w-full h-full flex md:hidden justify-center">
+        <div className="absolute w-full h-full flex lg:hidden justify-center">
           {/* <div className="relative w-full h-full"> */}
           <CollersIcon name="bg-product-page-v" />
+          {/* </div> */}
+        </div>
+        <div className="absolute w-full h-full hidden lg:flex xl:hidden justify-center">
+          {/* <div className="relative w-full h-full"> */}
+          <CollersIcon name="bg-product-page-lg" />
           {/* </div> */}
         </div>
         {createProducts()}
