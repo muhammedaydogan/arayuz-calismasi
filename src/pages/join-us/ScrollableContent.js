@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useEffect } from "react";
 import {
   Artvenue,
   Charolette,
@@ -11,7 +11,6 @@ import {
   Waves,
   Zoomerr,
 } from "../../images";
-import CollersIcon from "../../components/CollersIcon";
 
 const ScrollableContent = forwardRef((props, ref) => {
   const content = [
@@ -62,33 +61,47 @@ const ScrollableContent = forwardRef((props, ref) => {
     },
   ];
 
+  useEffect(() => {
+    // Scroll to the center of the content
+    if (ref.current) {
+      const scrollWidth = ref.current.scrollWidth;
+      const clientWidth = ref.current.clientWidth;
+      ref.current.scrollLeft = (scrollWidth - clientWidth) / 2; // Centering
+    }
+  }, [ref]);
+
   return (
-    <div className="flex justify-center items-center overflow-hidden w-full">
+    <div className="relative flex justify-center items-center overflow-hidden w-full bg-orange">
+      <div className="absolute inset-x-0 md:left-[24px] md:right-[44px] bottom-[72px] top-0 bg-yellow z-[2]"></div>
       <div
-        className="flex overflow-x-scroll scroll-smooth whitespace-nowrap w-max no-scrollbar py-12 rounded-[20px]"
+        className="flex overflow-x-scroll scroll-smooth whitespace-nowrap w-max no-scrollbar py-12 rounded-[20px] mx-auto z-[5]"
         ref={ref}
       >
         {content.map((item, index) => (
           <div
-            key={index + "cardElement"}
-            className="w-[384px] mx-2 p-4 bg-white rounded-lg shadow-lg flex flex-col shadow-dark"
+            key={"cardElement" + index}
+            className={`w-[319px] md:w-[380px] h-[326px] md:h-[430px] min-w-[319px] md:min-w-[380px] mx-2 p-10 bg-white rounded-lg shadow-lg flex flex-col shadow-dark ${
+              index === 0 && "ml-20"
+            } ${index === content.length - 1 && "mr-[100px]"}`}
           >
             <div className="flex flex-row items-center mb-4">
               <img
                 src={item.icon}
                 alt={`${item.name} logo`}
-                className="w-12 h-12 mr-4"
+                className="mr-4 object-contain"
               />
-              <div className="text-lg font-semibold">{item.name}</div>
+              <div className="text-lg md:text-2xl font-semibold">
+                {item.name}
+              </div>
             </div>
-            <div className="flex-grow mb-4  text-base whitespace-normal">
+            <div className="flex-grow mb-4 text-base whitespace-normal text-lg md:text-2xl flex items-center justify-center md:leading-relaxed">
               {item.description}
             </div>
-            <div className="flex flex-row items-center">
-              <img src={item.profileIcon} />
+            <div className="flex flex-row items-center gap-4">
+              <img src={item.profileIcon} className="w-10 h-10" />
               <div className="flex flex-col">
-                <div className="font-bold">{item.profileName}</div>
-                <div className="text-sm text-gray-500">{item.profileTitle}</div>
+                <div className="font-bold text-xl">{item.profileName}</div>
+                <div className="text-gray-500">{item.profileTitle}</div>
               </div>
             </div>
           </div>

@@ -11,6 +11,7 @@ module.exports = {
         primary: "#78350F",
         tertiary: "#0F172A",
         cream: "#FFFDF6",
+        yellow: "#FDE68A",
       },
       fontFamily: {
         sans: ["Roboto", "sans-serif"], // Varsayılan font Roboto oldu

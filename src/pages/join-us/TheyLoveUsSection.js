@@ -8,14 +8,14 @@ const TheyLoveUsSection = () => {
 
   const handlePrev = () => {
     cardContainerRef.current.scrollBy({
-      left: -500, // Width of one card including margin
+      left: -400, // Kaydirma uzunlugu padding ve marginler dahil. Zaten mobilde el ile kaydiriliyor orasi sorun degil direk buyuk ekranlarda da gayet guzel calisiyor.
       behavior: "smooth",
     });
   };
 
   const handleNext = () => {
     cardContainerRef.current.scrollBy({
-      left: 500, // Width of one card including margin
+      left: 400,
       behavior: "smooth",
     });
   };
@@ -30,10 +30,13 @@ const TheyLoveUsSection = () => {
           <CollersButton
             svg={<CollersIcon name={"left-arrow"} />}
             onClick={handlePrev}
+            iconMode={true}
           />
           <CollersButton
             svg={<CollersIcon name={"right-arrow"} />}
             onClick={handleNext}
+            iconMode={true}
+            className={"mr-12"}
           />
         </div>
       </div>

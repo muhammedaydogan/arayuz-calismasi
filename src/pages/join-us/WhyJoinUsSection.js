@@ -6,9 +6,9 @@ import CollersIcon from "../../components/CollersIcon";
 const WhyJoinUsSection = () => {
   return (
     <div className="relative px-12 flex justify-center items-center">
-      <div className="flex flex-col lg:flex-row px-20 border-2 shadow-dark mx-4 p-3 rounded-[30px]">
+      <div className="flex flex-col lg:flex-row px-8 md:px-20 border-2 shadow-dark mx-4 p-3 rounded-[30px]">
         {/* Text Side */}
-        <div className="flex flex-col gap-12 justify-center items-center z-[20]">
+        <div className="flex flex-col gap-4 md:gap-12 justify-center items-center z-[20]">
           <div className="font-normal font-extrabold text-7xl">Why join us</div>
           <div className="flex flex-col text-xl font-normal">
             <div className="flex flex-row gap-2">
