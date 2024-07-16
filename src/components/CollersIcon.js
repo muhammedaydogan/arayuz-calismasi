@@ -581,6 +581,9 @@ const CollersIcon = ({ name }) => {
         </svg>
       );
 
+      case "konsantr":
+        return ;
+
     default:
       return <div>ICON HERE</div>;
   }
