@@ -28,7 +28,7 @@ export const OpeningPage = () => {
       <div className="flex flex-col md:flex-row justify-evenly px-20 py-1 gap-0">
         {/* Left Side */}
         <div className="flex flex-col py-8 md:py-12 lg:py-20 gap-8 self-center md:mr-20">
-          <div className="text-black text-4xl md:text-5xl lg:text-7xl font-extrabold text-center md: text-left">
+          <div className="text-black text-4xl md:text-5xl lg:text-7xl font-extrabold text-center md:text-left">
             Collectible Sneakers
           </div>
           <div className="text-black text-lg self-center font-normal">
